@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* =======================================
+                    Navbar
+  ========================================= */
+  header {
+    display: flex;
+    border: 1px solid black;
+    margin: 5px 20px 0 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header h4 {
+    margin-left: 20px;
+  }
+
+  .list-group {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+    gap: 20px;
+  }
+
+  .list-group li {
+    cursor: pointer;
+    border-right: 1px solid black;
+    padding-right: 20px;
+  }
+
+  .list-group li:first-child {
+    color: blue;
+  }
+
+  .list-group li:last-child {
+    border-right: 0;
+  }
+
+  /* =======================================
+                    List Books
+  ========================================= */
+  .list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  #data {
+    width: 40%;
+  }
+
+  .points {
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(65, 63, 63);
+    margin: 10px 0 10px 0;
+    padding: 0 10px 0 10px;
+    background-color: #d3d3d3;
+    align-items: center;
+    font-weight: 600;
+    height: 50px;
+  }
+
+  .points button {
+    padding: 5px 30px 5px 30px;
+    border: 3px solid black;
+    font-weight: 800;
+  }
+
+  .hide-list {
+    display: none;
+  }
+
+  /* =======================================
+                    Add Books
+  ========================================= */
+  .add-book {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 485px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 10px;
+    margin-top: 20px;
+    gap: 10px;
+  }
+
+  .form input {
+    padding: 5px 5px;
+    border: 3px solid black;
+  }
+
+  .form button {
+    width: 100px;
+    padding: 5px 10px 5px 10px;
+    border: 3px solid black;
+    align-self: flex-end;
+    font-weight: 800;
+  }
+
+  .show-addbook {
+    display: flex;
+  }
+
+  #msg {
+    margin-top: -40px;
+  }
+
+  .para {
+    display: none;
+  }
+
+  .show-msg {
+    display: block;
+  }
+
+  /* =======================================
+                    Contact
+  ========================================= */
+  .contact {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 485px;
+  }
+
+  .show-contact {
+    display: flex;
+  }
+
+  /* =======================================
+                    Footer
+  ========================================= */
+  footer {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    margin: 100px 20px 10px 20px;
+    padding-left: 10px;
+  }
