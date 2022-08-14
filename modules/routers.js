@@ -4,6 +4,7 @@ import {
   bookAdd,
   item,
   contact,
+  footer,
 } from "./getElements.js";
 
 class Routers {
@@ -12,6 +13,7 @@ class Routers {
     listed.classList.remove("hide-list");
     addBook.classList.remove("show-addbook");
     contactedBook.classList.remove("show-contact");
+    footer.classList.remove("show-footer");
     bookAdd.style.color = "black";
     item.style.color = "blue";
     contact.style.color = "black";
@@ -22,6 +24,7 @@ class Routers {
   bookAdd = () => {
     listed.classList.add("hide-list");
     addBook.classList.add("show-addbook");
+    footer.classList.add("show-footer");
     contactedBook.classList.remove("show-contact");
     bookAdd.style.color = "blue";
     item.style.color = "black";
@@ -34,6 +37,7 @@ class Routers {
     listed.classList.add("hide-list");
     addBook.classList.remove("show-addbook");
     contactedBook.classList.add("show-contact");
+    footer.classList.add("show-footer");
     bookAdd.style.color = "black";
     item.style.color = "black";
     contact.style.color = "blue";

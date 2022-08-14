@@ -30,6 +30,7 @@ class AddBook {
     } else {
       author.style.border = "3px solid black";
       title.style.border = "3px solid black";
+      title.focus();
       if (localStorage.getItem("book") === null) {
         bookArr.push(book);
         localStorage.setItem("book", JSON.stringify(bookArr));

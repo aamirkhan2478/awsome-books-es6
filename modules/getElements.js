@@ -10,3 +10,4 @@ export const addBook = document.getElementById("Added");
 export const contactedBook = document.getElementById("contacted");
 export const message = document.getElementById("msg");
 export const dateTime = document.getElementById("datetime");
+export const footer = document.getElementById("footer");
