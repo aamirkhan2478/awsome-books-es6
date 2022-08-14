@@ -92,7 +92,7 @@ header h4 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 485px;
+  height: 200px;
 }
 
 .form {
@@ -141,7 +141,11 @@ header h4 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 485px;
+  height: 200px;
+}
+
+.contact h1{
+  margin-top: 100px;
 }
 
 .show-contact {
