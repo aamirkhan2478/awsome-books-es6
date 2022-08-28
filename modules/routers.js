@@ -4,16 +4,17 @@ import {
   bookAdd,
   item,
   contact,
-  footer,
 } from "./getElements.js";
 
 class Routers {
   // Show only the book lists section
   bookList = () => {
-    listed.classList.remove("hide-list");
-    addBook.classList.remove("show-addbook");
-    contactedBook.classList.remove("show-contact");
-    footer.classList.remove("show-footer");
+    listed.classList.add("d-flex");
+    listed.classList.remove("d-none");
+    addBook.classList.add("d-none");
+    addBook.classList.remove("d-flex");
+    contactedBook.classList.add("d-none");
+    contactedBook.classList.remove("d-flex");
     bookAdd.style.color = "black";
     item.style.color = "blue";
     contact.style.color = "black";
@@ -22,10 +23,12 @@ class Routers {
 
   // Show only the Add book section
   bookAdd = () => {
-    listed.classList.add("hide-list");
-    addBook.classList.add("show-addbook");
-    footer.classList.add("show-footer");
-    contactedBook.classList.remove("show-contact");
+    listed.classList.add("d-none");
+    listed.classList.remove("d-flex");
+    addBook.classList.add("d-flex");
+    addBook.classList.remove("d-none");
+    contactedBook.classList.add("d-none");
+    contactedBook.classList.remove("d-flex");
     bookAdd.style.color = "blue";
     item.style.color = "black";
     contact.style.color = "black";
@@ -34,10 +37,12 @@ class Routers {
 
   // Show only the contact section
   contactAdd = () => {
-    listed.classList.add("hide-list");
-    addBook.classList.remove("show-addbook");
-    contactedBook.classList.add("show-contact");
-    footer.classList.add("show-footer");
+    listed.classList.add("d-none");
+    listed.classList.remove("d-flex");
+    addBook.classList.add("d-none");
+    addBook.classList.remove("d-flex");
+    contactedBook.classList.add("d-flex");
+    contactedBook.classList.remove("d-none");
     bookAdd.style.color = "black";
     item.style.color = "black";
     contact.style.color = "blue";

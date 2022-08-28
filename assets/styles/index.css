@@ -1,191 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=DynaPuff&display=swap");
-
 body {
   margin: 0;
   padding: 0;
-  font-family: "DynaPuff", cursive;
+  box-sizing: border-box;
   background-image: url("../images/books-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-/* =======================================
-                    Navbar
-  ========================================= */
-header {
-  display: flex;
-  border: 1px solid black;
-  margin: 5px 20px 0 20px;
-  justify-content: space-between;
-  align-items: center;
-  background-color: azure;
+.book-list {
+  height: 100%;
 }
 
-header h4 {
-  margin-left: 20px;
-}
-
-.list-group {
-  list-style: none;
-  display: flex;
-  margin-right: 20px;
-  gap: 20px;
-}
-
-.list-group li {
-  cursor: pointer;
-  border-right: 1px solid black;
-  padding-right: 20px;
-}
-
-.list-group li:first-child {
-  color: blue;
-}
-
-.list-group li:last-child {
-  border-right: 0;
-}
-
-/* =======================================
-                  DateTime
-  ========================================= */
-#datetime {
-  text-align: center;
-  font-size: large;
-}
-
-/* =======================================
-                    List Books
-  ========================================= */
-.list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.add-book {
   height: 100vh;
 }
 
-#data {
-  width: 40%;
-}
-
-.points {
-  border: 1px solid black;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid rgb(65, 63, 63);
-  margin: 10px 0 10px 0;
-  padding: 0 10px 0 10px;
-  background-color: #d3d3d3;
-  align-items: center;
-  font-weight: 600;
-  height: 50px;
-  border-radius: 30px;
-}
-
-.points button {
-  padding: 5px 30px 5px 30px;
-  font-weight: 800;
-  border-radius: 30px;
-  background-color: azure;
-  cursor: pointer;
-}
-
-.points button:hover {
-  background-color: rgb(163, 207, 207);
-  color: #fff;
-}
-
-.hide-list {
-  display: none;
-}
-
-/* =======================================
-                    Add Books
-  ========================================= */
-.add-book {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  width: 20%;
-  height: 10px;
-  margin-top: 20px;
-  gap: 10px;
-}
-
-.form input {
-  padding: 5px 5px;
-  border-radius: 20px;
-  border: 3px solid black;
-  outline: none;
-}
-
-.form button {
-  width: 100px;
-  padding: 5px 10px 5px 10px;
-  align-self: flex-end;
-  font-weight: 800;
-  border-radius: 30px;
-  background-color: azure;
-  cursor: pointer;
-}
-
-.form button:hover {
-  background-color: rgb(163, 207, 207);
-  color: #fff;
-}
-
-.show-addbook {
-  display: flex;
-}
-
-.para {
-  display: none;
-}
-
-.show-msg {
-  display: block;
-}
-
-/* =======================================
-                    Contact
-  ========================================= */
 .contact {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
-}
-
-.contact h1 {
-  margin-top: 100px;
-}
-
-.show-contact {
-  display: flex;
-}
-
-/* =======================================
-                    Footer
-  ========================================= */
-footer {
-  border: 1px solid black;
-  display: none;
-  align-items: center;
-  height: 60px;
-  margin: 216px 20px 10px 20px;
-  padding-left: 10px;
-  background-color: azure;
-}
-
-.show-footer {
-  display: flex;
+  height: 100vh;
 }

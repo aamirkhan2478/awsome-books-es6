@@ -15,28 +15,55 @@ class ShowBooks {
 
     // Check if array is empty then show this message
     if (bookArr.length === 0) {
-      const list = document.querySelector("#data");
-      const book = document.createElement("p");
-      book.classList.add("points");
-      book.innerHTML = `Data not found`;
-      book.style.color = "red";
-      list.appendChild(book);
+      const bookData = document.querySelector("#data");
+      const card = document.createElement("div");
+      const cardHeader = document.createElement("div");
+      const cardBody = document.createElement("div");
+      const bookTitle = document.createElement("p");
+      bookTitle.innerHTML = `<h1 class="text-danger">Data not Found</h1>`;
+      cardHeader.innerText = `No Data`;
+
+      card.className = "card mt-3 shadow";
+      cardHeader.className = "card-header";
+      cardBody.className = "card-body";
+
+      bookData.appendChild(card);
+      card.appendChild(cardHeader);
+      card.appendChild(cardBody);
+      cardBody.appendChild(bookTitle);
     }
 
     // Fetch all the data from array
-    bookArr.map((data) => {
-      const { title, author, id } = data;
-      const list = document.querySelector("#data");
-      const book = document.createElement("p");
-      book.classList.add("points");
-      book.setAttribute("id", id);
-      book.innerHTML = `"${title}" by ${author}`;
+    bookArr.map((data, index) => {
+      const { title, author } = data;
+      const bookData = document.querySelector("#data");
+      const card = document.createElement("div");
+      const cardHeader = document.createElement("div");
+      const cardBody = document.createElement("div");
+      const bookTitle = document.createElement("p");
+      const bookAuthor = document.createElement("p");
       const removeButton = document.createElement("button");
       removeButton.innerHTML = "Remove";
-      removeButton.addEventListener("click", () => removeBookData.removeBook(id));
-      book.appendChild(removeButton);
-      list.appendChild(book);
-      return book;
+      bookTitle.innerHTML = `<span class="fw-bold">Title:</span> ${title}`;
+      bookAuthor.innerHTML = `<span class="fw-bold">Author:</span> ${author}`;
+      cardHeader.innerText = `${title}`;
+
+      card.className = "card mt-3 shadow";
+      cardHeader.className = "card-header";
+      cardBody.className = "card-body";
+      removeButton.className = "btn btn-danger";
+
+      removeButton.addEventListener("click", () =>
+        removeBookData.removeBook(index)
+      );
+
+      bookData.appendChild(card);
+      card.appendChild(cardHeader);
+      card.appendChild(cardBody);
+      cardBody.appendChild(bookTitle);
+      cardBody.appendChild(bookAuthor);
+      cardBody.appendChild(removeButton);
+      return data;
     });
   };
 }

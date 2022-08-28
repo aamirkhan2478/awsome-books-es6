@@ -9,27 +9,18 @@ class AddBook {
   addBook = () => {
     const bookTitle = title.value;
     const bookAuthor = author.value;
-    const book = new Book(bookTitle, bookAuthor, Math.random());
+    const book = new Book(bookTitle, bookAuthor);
     const showBookList = new ShowBooks();
     let str = "";
     let bookArr = [];
 
     // Check if title and author field is empty or not
-    if (title.value === "") {
-      message.classList.add("show-msg");
-      message.style.color = "red";
-      title.style.border = "1px solid red";
-      author.style.border = "3px solid black";
-      message.innerHTML = `Please enter a book title`;
-    } else if (author.value === "") {
-      message.classList.add("show-msg");
-      message.style.color = "red";
-      author.style.border = "1px solid red";
-      title.style.border = "3px solid black";
-      message.innerHTML = `Please enter a book author`;
+    if (title.value === "" || author.value === "") {
+      message.classList.add("d-block");
+      message.classList.remove("d-none");
+      message.className = "text-danger";
+      message.innerHTML = `All fields are required!`;
     } else {
-      author.style.border = "3px solid black";
-      title.style.border = "3px solid black";
       title.focus();
       if (localStorage.getItem("book") === null) {
         bookArr.push(book);
@@ -44,13 +35,15 @@ class AddBook {
       author.value = "";
       str = "";
       bookData.innerHTML = str;
-      message.classList.add("show-msg");
-      message.style.color = "green";
+      message.classList.add("d-block");
+      message.classList.remove("d-none");
+      message.className = "text-success";
       message.innerHTML = `New book added.`;
       showBookList.showBooks();
     }
     setTimeout(() => {
-      message.classList.remove("show-msg");
+      message.classList.add("d-none");
+      message.classList.remove("d-block");
     }, 2500);
   };
 }

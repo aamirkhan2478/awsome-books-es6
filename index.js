@@ -33,4 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const dateTime = new DTime();
     dateTime.dateTime();
   }, 1000);
+
+  const routers = new Routers();
+    routers.bookList();
 });
